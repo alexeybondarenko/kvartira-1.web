@@ -39,182 +39,84 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-@import ./components/hamb
+@import components/hamb
+@import components/header
+@import components/nav
+@import components/promo
+@import components/stats
+@import components/btn
 
-
-.header
-  background-size: cover
-  background-color: #3d444b
-  background-image: url('/img/bg.png')
-  background-repeat: no-repeat
-  background-position: 0 0
-
-  +minDescop
-    height: 100vh
-    max-height: 980px
-    display: flex
-    flex-direction: column
-    flex-wrap: nowrap
-    justify-content: space-between
-
-    .header__nav
-      flex: 0 0 auto
-    .header__promo
-      flex: 0 0 auto
-    .header__footer
-      flex: 0 0 auto
-
-  &__footer
-    margin-top: 20px
-    padding-bottom: 40px
-
-    +minDescop
-      margin-top: 0
-      padding-bottom: 60px
-
-    &__stats
-    &__button
-      text-align: center
-
-      margin-top: 20px
-      +minDescop
-        margin-top: 0
-
-
-@import ./components/nav
-
-.promo
+.text-title
+  color: #000000
+  font-family: Intro
+  font-size: 60px
+  font-weight: 900
+  text-transform: uppercase
+  letter-spacing: 1.2px
   text-align: center
+  // 59px - 21px
+  margin-bottom: 38px
 
-  &__headings
-    line-height: 1
-    color: #ffffff
-    font-family: 'Helvetica Neue'
-    text-transform: uppercase
+  &::before
+    content: ''
+    display: inline-block
+    width: 54px
+    height: 85px
+    background-image: url('/img/pics/sock.png')
+    background-position: 0 0
+    background-size: 100% 100%
+    background-repeat: no-repeat
 
-    text-align: center
-    +minDescop
-      text-align: left
-      padding-top: 37px
+    margin-bottom: -21px
+    margin-right: 33px
 
-    h1
-      font-size: 34px
-      font-weight: 900
-      letter-spacing: 0.86px
-
-      +minDescop
-        font-size: 72px
-        font-weight: 900
-        letter-spacing: 1.76px
-
-    h2
-      font-size: 22px
-      font-weight: 300
-      margin-top: 5px
-      letter-spacing: 0.46px
-
-      +minDescop
-        margin-top: 19px
-        font-size: 48px
-        font-weight: 300
-        letter-spacing: 0.96px
-
-  &__video
-    margin-top: 40px
-    +minDescop
-      margin-top: 0
-
-.promo__video
-  display: inline-block
+.text-center
   text-align: center
+  color: #333333
+  font-family: 'Helvetica Neue'
+  font-size: 16px
+  font-weight: 300
+  line-height: 26px
+  letter-spacing: 0.32px
 
-  span
-    color: #fffefe
-    font-family: 'Helvetica Neue'
-    font-size: 15px
-    font-weight: 300
+.list-points
+  display: block
+  margin-top: 46px
+  margin-bottom: 41px
+
+  li
+    margin-top: 30px
+    display: block
+    position: relative
+    padding: 3px 0 3px 41px
+
+    color: #333333
+    font-family: Intro
+    font-size: 26px
+    font-weight: 900
+    letter-spacing: 0.52px
     text-transform: uppercase
-    display: block
-  img
-    display: block
-    margin-top: 10px
-    +minDescop
-      margin-top: 20px
+    line-height: 30px
 
-.stats
-  &__item
-    display: block
-    color: #fff
+    &::before
+      content: ''
+      display: block
+      width: 12px
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      background-color: #b40e00
+
+.about-us-block
+  &__image
+    +minDescop
+      padding-top: 110px
+      padding-right: 52px
+  &__text
+    +minDescop
+      padding-top: 100px
+      padding-bottom: 110px
+
+  &__button
     text-align: center
-    margin-top: 10px
-
-    +minDescop
-      display: inline-block
-      padding: 0 18px
-      margin-top: 0
-
-    .border
-      display: inline-block
-      position: relative
-      min-height: 79px
-      padding-top: 6px
-      padding-right: 10px
-      width: 70px
-
-      &:before
-        content: ''
-        position: absolute
-        right: 0
-        top: 0
-        display: block
-        width: 70px
-        height: 79px
-        background: transparent url('/img/more-border.svg') 0 0 no-repeat
-        background-size: 100% 100%
-
-    .more
-      font-family: Intro
-      font-size: 10px
-      font-weight: 400
-      letter-spacing: 0.31px
-      text-align: right
-      text-transform: uppercase
-      margin-right: 4px
-
-    .number
-      font-family: Intro
-      font-size: 60px
-      font-weight: 900
-      letter-spacing: 1.86px
-      text-align: right
-      float: right
-    .text
-      font-family: Intro
-      font-size: 14px
-      font-weight: 700
-      text-transform: uppercase
-      letter-spacing: 0.43px
-      text-align: center
-      margin-top: 10px
-
-.btn
-  display: inline-block
-
-  &_bordered
-    padding: 11px 9px
-    border-right: 1px solid #00b44e
-    border-bottom: 1px solid #00b44e
-
-    .btn__in
-      display: inline-block
-      color: #ffffff
-      background-color: #00672d
-      font-family: 'Helvetica Neue'
-      font-size: 14px
-      font-weight: 700
-      line-height: 1
-      text-transform: uppercase
-      letter-spacing: 0.35px
-      padding: 17px 20px
-      min-width: 230px
-      text-align: center
