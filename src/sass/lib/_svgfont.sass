@@ -1,0 +1,44 @@
+@font-face
+	font-family: "svgfont"
+	src: url('../fonts/svgfont.eot')
+	src: url('../fonts/svgfont.eot?#iefix') format('eot'), url('../fonts/svgfont.woff') format('woff'), url('../fonts/svgfont.woff2') format('woff2'), url('../fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+$icon-carret-right: "\EA01"
+$icon-facebook-logo: "\EA02"
+$icon-instagram-logo: "\EA03"
+$icon-pinterest-logo: "\EA04"
+$icon-arrow-right: "\EA05"
+$icon-love: "\EA06"
+$icon-signature: "\EA07"
+
+
+%icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend %icon
+	display: inline-block
+
+.icon-carret-right:before
+	content: $icon-carret-right
+.icon-facebook-logo:before
+	content: $icon-facebook-logo
+.icon-instagram-logo:before
+	content: $icon-instagram-logo
+.icon-pinterest-logo:before
+	content: $icon-pinterest-logo
+.icon-arrow-right:before
+	content: $icon-arrow-right
+.icon-love:before
+	content: $icon-love
+.icon-signature:before
+	content: $icon-signature

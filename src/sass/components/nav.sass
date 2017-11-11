@@ -1,0 +1,71 @@
+
+.nav
+  text-align: center
+  color: white
+  padding-top: 40px
+  padding-bottom: 60px
+
+  &__logo
+    margin-bottom: 40px
+
+  &__left
+  &__right
+
+  &__item
+    text-decoration: none
+    text-transform: uppercase
+    font-family: 'Helvetica Neue'
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: 0.32px
+
+    margin-top: 10px
+
+    & > a
+      color: inherit
+
+    &_red
+      color: #ff4839
+
+  +minDescop
+    .nav__logo
+      margin-bottom: 0
+    .nav__menu
+      margin-top: -115px
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      justify-content: center
+
+    .nav__left,
+    .nav__right
+      flex: 0 0 50%
+
+    .nav__left
+      padding-right: 100px
+      .nav__items__in
+        justify-content: flex-end
+
+    .nav__right
+      padding-left: 100px
+
+    .nav__items
+      padding: 20px 0
+      border-top: 1px solid white
+      border-bottom: 1px solid white
+
+      .nav__items__in
+        display: flex
+        justify-content: space-around
+        max-width: 485px
+
+      .nav__item
+        flex: 0 0 auto
+
+    .nav__item
+      margin-top: 0
+
+    .nav__left
+      .nav__items__in
+        margin-left: auto
+        margin-right: 0

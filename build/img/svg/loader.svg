@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>loader</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.0-Collection-—-Klodt" transform="translate(-913.000000, -1696.000000)" fill-rule="nonzero" fill="">
+            <path d="M933,1733 C942.388841,1733 950,1725.38884 950,1716 C950,1706.61116 942.388841,1699 933,1699 C923.611159,1699 916,1706.61116 916,1716 C916,1725.38884 923.611159,1733 933,1733 Z M933,1736 C921.954305,1736 913,1727.04569 913,1716 C913,1704.95431 921.954305,1696 933,1696 C944.045695,1696 953,1704.95431 953,1716 C953,1727.04569 944.045695,1736 933,1736 Z" id="loader"></path>
+        </g>
+    </g>
+</svg>
