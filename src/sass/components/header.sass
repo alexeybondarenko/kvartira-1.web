@@ -4,11 +4,12 @@
   background-image: url('/img/bg.png')
   background-repeat: no-repeat
   background-position: 0 0
+  position: relative
 
   +minDescop
     height: 100vh
     max-height: 980px
-    min-height: 700px
+    min-height: 600px
     display: flex
     flex-direction: column
     flex-wrap: nowrap
@@ -20,6 +21,18 @@
       flex: 0 0 auto
     .header__footer
       flex: 0 0 auto
+
+    &::before
+      content: ''
+      display: block
+      width: 27px
+      height: 52px
+      background: transparent url('/img/pics/to-bottom.png') 0 0 no-repeat
+      position: absolute
+      left: 50%
+      margin-left: -8px
+      bottom: 20px
+
 
   &__footer
     margin-top: 20px
