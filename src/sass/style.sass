@@ -6,6 +6,12 @@
 +font('Intro', 'intro/Intro-Regular', 400)
 +font('Intro', 'intro/Intro-Black', 900)
 
++font('Helvetica Neue Cyr', 'HelveticaNeueCyr-Light/HelveticaNeueCyr-Light', 300)
++font('Helvetica Neue Cyr', 'HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium', 700)
++font('Helvetica Neue Cyr', 'HelveticaNeueCyr-Bold/HelveticaNeueCyr-Bold', 700)
++font('Helvetica Neue Cyr - Black', 'HelveticaNeueCyr-Black/HelveticaNeueCyr-Black', 400)
++font('Helvetica Neue Cyr - Thin', 'HelveticaNeueCyr-Thin/HelveticaNeueCyr-Thin', 400)
+
 =maxMobile
   +r(319)
     @content
@@ -45,78 +51,159 @@ body
 @import components/promo
 @import components/stats
 @import components/btn
+@import components/text
+@import components/list-points
+@import components/features
+@import components/proposal
 
-.text-title
-  color: #000000
-  font-family: Intro
-  font-size: 60px
-  font-weight: 900
-  text-transform: uppercase
-  letter-spacing: 1.2px
-  text-align: center
-  // 59px - 21px
-  margin-bottom: 38px
+@import blocks/about-us
+@import blocks/features
+@import blocks/unique
 
-  &::before
-    content: ''
-    display: inline-block
-    width: 54px
-    height: 85px
-    background-image: url('/img/pics/sock.png')
-    background-position: 0 0
-    background-size: 100% 100%
-    background-repeat: no-repeat
+.price-item
+  width: 313px
 
-    margin-bottom: -21px
-    margin-right: 33px
+  &_vip .price-item__header::before
+      background-image: url('/img/pics/vip-corner.png')
+  &_standard .price-item__header::before
+      background-image: url('/img/pics/standard-corner.png')
 
-.text-center
-  text-align: center
-  color: #333333
-  font-family: 'Helvetica Neue'
-  font-size: 16px
-  font-weight: 300
-  line-height: 26px
-  letter-spacing: 0.32px
-
-.list-points
-  display: block
-  margin-top: 46px
-  margin-bottom: 41px
-
-  li
-    margin-top: 30px
-    display: block
+  &__header
     position: relative
-    padding: 3px 0 3px 41px
-
-    color: #333333
-    font-family: Intro
-    font-size: 26px
-    font-weight: 900
-    letter-spacing: 0.52px
-    text-transform: uppercase
-    line-height: 30px
+    text-align: center
+    z-index: 2
 
     &::before
+      position: absolute
       content: ''
       display: block
-      width: 12px
-      height: 100%
-      position: absolute
-      left: 0
-      top: 0
+      background-image: url('/img/pics/basic-corner.png')
+      background-size: 100% auto
+      background-repeat: no-repeat
+      background-position: 0 0
+      width: 349px
+      min-height: 191px
+
+      top: -15px
+      left: -18px
+      z-index: -1
+
+    .title
+      color: #ffffff
+      font-family: Intro
+      font-size: 36px
+      font-weight: 900
+      text-transform: uppercase
+      letter-spacing: 0.72px
+      padding-top: 33px
+
+    .price
+      margin-top: 29px
+
+      display: inline-block
+      width: 100px
+      height: 100px
+      border-radius: 50%
       background-color: #b40e00
+      color: #ffffff
+      padding-top: 18px
 
-.about-us-block
-  &__image
-    +minDescop
-      padding-top: 110px
-      padding-right: 52px
-  &__text
-    +minDescop
-      padding-top: 100px
-      padding-bottom: 110px
+      span
+        display: block
+        font-family: "Helvetica Neue Cyr - Black"
+        font-weight: 400
+        text-transform: uppercase
+        font-size: 14px
+        letter-spacing: 0.28px
 
-  &__button
+      .number
+        font-size: 34px
+        letter-spacing: 0.68px
+        line-height: 30px
+  &__footer
     text-align: center
+    margin-top: -22px
+    position: relative
+    z-index: 2
+
+  &__content
+    margin: -100px 15px 0
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15)
+    background-color: #ffffff
+    padding-top: 120px
+    padding-bottom: 40px
+    position: relative
+    z-index: 1
+
+    li
+      padding: 15px 0
+      position: relative
+      color: #000000
+      font-family: "Helvetica Neue Cyr"
+      font-size: 18px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 0.36px
+      text-align: center
+
+    li + li
+      &::before
+        position: absolute
+        display: block
+        top: 0
+        left: 50%
+        margin-left: -40px
+
+        content: ''
+        width: 80px
+        height: 1px
+        background-color: #004b06
+
+.prices
+  display: inline-block
+
+  .price-item
+    display: inline-block
+    vertical-align: middle
+
+  .price-item + .price-item
+    margin-left: 30px
+
+.prices-block
+  padding-top: 58px
+  padding-bottom: 122px
+  background-image: url('/img/prices-bg.png')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+
+  &__prices
+    margin-top: 36px
+    text-align: center
+
+.tabs
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  width: 100%
+
+  &__item
+    flex: 1 1 auto
+    text-align: center
+
+    a
+      display: inline-block
+      color: #000000
+      font-family: Intro
+      font-size: 21px
+      font-weight: 900
+      text-transform: uppercase
+      letter-spacing: 0.6px
+      padding: 22px 21px
+      border: 1px solid transparent
+
+    &_active
+      a
+        color: #00672d
+        border-right-color: #00b44e
+        border-bottom-color: #00b44e
