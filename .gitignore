@@ -1,8 +1,0 @@
-**/.*/
-.DS_Store
-
-build/js
-build/css
-node_modules
-_site
-build/.jekyll-metadata
