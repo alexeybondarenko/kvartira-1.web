@@ -1,5 +1,8 @@
 .proposal
   text-align: center
+  margin-top: 40px
+  +minDescop
+    margin-top: 0
 
   h5
     color: #000000
@@ -17,9 +20,11 @@
     background-image: url('/img/pics/bbq-bg.png')
     background-size: cover
     background-position: 0 0
-    margin: -15px -16px
     padding: 27px 18px 47px
     position: relative
+
+    +minDescop
+      margin: -15px -16px
 
     h5
       color: #000000

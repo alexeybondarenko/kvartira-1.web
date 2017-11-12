@@ -1,12 +1,16 @@
 .prices
   display: inline-block
+  width: 100%
 
   .price-item
     display: inline-block
+    max-width: 100%
     vertical-align: middle
 
   .price-item + .price-item
-    margin-left: 30px
+    margin-top: 20px
+    +minDescop
+      margin-left: 30px
 
 .price-item
   width: 313px
@@ -29,10 +33,10 @@
       background-size: 100% auto
       background-repeat: no-repeat
       background-position: 0 0
-      width: 349px
       min-height: 191px
 
       top: -15px
+      right: -15px
       left: -18px
       z-index: -1
 
@@ -88,11 +92,14 @@
       position: relative
       color: #000000
       font-family: "Helvetica Neue Cyr"
-      font-size: 18px
       font-weight: 700
       text-transform: uppercase
       letter-spacing: 0.36px
       text-align: center
+      font-size: 14px
+
+      +minDescop
+        font-size: 18px
 
     li + li
       &::before

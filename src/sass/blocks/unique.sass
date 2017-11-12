@@ -3,5 +3,23 @@
   padding-top: 70px
   padding-bottom: 76px
 
+  +minDescop
+    position: relative
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      width: 2px
+      height: 100%
+      background-color: #d1d1d1
+      opacity: 0.2
+      left: 50%
+      top: 0
+      margin-left: -1px
+
   &__header
-    margin-bottom: 94px
+    margin-bottom: 20px
+
+    +minDescop
+      margin-bottom: 94px

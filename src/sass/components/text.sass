@@ -2,13 +2,16 @@
 .text-title
   color: #000000
   font-family: Intro
-  font-size: 60px
   font-weight: 900
   text-transform: uppercase
   letter-spacing: 1.2px
   text-align: center
   // 59px - 21px
   margin-bottom: 38px
+  font-size: 40px
+
+  +minDescop
+    font-size: 60px
 
   &::before
     content: ''
@@ -26,15 +29,18 @@
 .text-title-medium
   color: #000000
   font-family: Intro
-  font-size: 50px
   font-weight: 900
   text-transform: uppercase
   letter-spacing: 1px
   text-align: center
 
+  font-size: 30px
+  +minDescop
+    font-size: 50px
+
   &::before
     content: ''
-    display: inline-block
+    display: none
     width: 54px
     height: 85px
     background-image: url('/img/pics/sock.png')
@@ -44,6 +50,9 @@
 
     margin-bottom: -23px
     margin-right: 33px
+
+    +minDescop
+      display: inline-block
 
 .text-center
   text-align: center
