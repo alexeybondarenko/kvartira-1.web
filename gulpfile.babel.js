@@ -11,10 +11,10 @@ const $ = loadGulpPlugins();
 
 gulp.task('clean', () => (
   del([
-    './_site/css',
-    './_site/js',
-    './_site/img',
-    './_site/fonts',
+    './build/css',
+    './build/js',
+    './build/img',
+    './build/fonts',
   ])
 ));
 
