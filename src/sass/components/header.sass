@@ -1,7 +1,15 @@
+@keyframes jump
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(0, -10%, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
 .header
   background-size: cover
   background-color: #3d444b
-  background-image: url('/img/bg.png')
+  background-image: url('../img/bg.png')
   background-repeat: no-repeat
   background-position: 0 0
   position: relative
@@ -27,11 +35,13 @@
       display: block
       width: 27px
       height: 52px
-      background: transparent url('/img/pics/to-bottom.png') 0 0 no-repeat
+      background: transparent url('../img/pics/to-bottom.png') 0 0 no-repeat
       position: absolute
       left: 50%
       margin-left: -8px
       bottom: 20px
+
+      animation: jump 1s cubic-bezier(0.4, 0, 1, 1) infinite
 
 
   &__footer

@@ -87,7 +87,7 @@ gulp.task('dev', (done) => {
 
 gulp.task('prefix', () => (
   gulp.src(`./_site/**/*.html`)
-  .pipe($.prefix('/', [
+  .pipe($.prefix('/kvartira-1.web', [
     {match: "img[src]", attr: "src"},
     {match: "a[href]", attr: "href"}, // this selector was added to the default set of selectors
     {match: "script[src]", attr: "src"},
