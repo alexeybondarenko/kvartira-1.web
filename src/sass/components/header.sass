@@ -7,12 +7,26 @@
     transform: translate3d(0, 0, 0)
 
 .header
-  background-size: cover
-  background-color: rgba(0, 0, 0, .85)
-  background-image: url('../img/bg.png')
-  background-repeat: no-repeat
-  background-position: 0 0
   position: relative
+
+  .header__scroll-bottom
+    display: none
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    z-index: -1
+
+  &::before
+    background-size: cover
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-position: 0 0
+
 
   +minDescop
     height: 100vh
@@ -30,8 +44,7 @@
     .header__footer
       flex: 0 0 auto
 
-    &::before
-      content: ''
+    .header__scroll-bottom
       display: block
       width: 27px
       height: 52px
