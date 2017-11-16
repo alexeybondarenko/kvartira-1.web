@@ -56,4 +56,29 @@ $(document).ready(function () {
     const images = resp.user.media.nodes.slice(0, 4);
     addImages($('#instagram'), images)
   })
+
+
+  $('.prices-block').each(function () {
+    const $prices = $(this)
+    const tabHeadersActiveClass = 'tabs__item_active'
+    const $tabHeaders = $prices.find('.prices-block__tabs .tabs__item')
+    const tabBlocksActiveClass = 'tabs__item_active'
+    const $tabBlocks = $prices.find('.prices-block__prices .prices')
+
+    function setActive(index) {
+      $tabHeaders.removeClass(tabHeadersActiveClass)
+      $tabHeaders.eq(index).addClass(tabHeadersActiveClass)
+
+      $tabBlocks.css('display', 'none')
+      $tabBlocks.eq(index).css('display', 'block')
+    }
+
+    $tabHeaders.on('click', function (e) {
+      e.preventDefault()
+      e.stopPropagation()
+      const $header = $(this)
+      setActive($tabHeaders.index($header))
+    })
+    setActive(0)
+  })
 })
