@@ -35,8 +35,26 @@
 
   &__widget
     display: inline-block
+    margin: -5px
+
     +minDescop
-      margin-top: 47px
+      margin-top: 26px
+
+    a
+      width: 50%
+      display: inline-block
+      padding: 5px
+
+      .feedback__widget__in
+        display: inline-block
+        overflow: hidden
+        box-sizing: border-box
+        border: 5px solid white
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4)
+
+      &:hover .feedback__widget__in
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4)
+
   &__content
     margin-top: 60px
     text-align: center

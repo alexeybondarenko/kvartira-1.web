@@ -26,4 +26,34 @@ $(document).ready(function () {
       scrollToElement($(url.hash), 500)
     }
   })
+
+  const INSTAGRAM_NAME = 'kvartira1_zp'
+
+  function addImages(element, images = []) {
+    images.forEach((image) => {
+      const link = document.createElement('a')
+      const img = document.createElement('img')
+      const inner = document.createElement('span')
+
+      img.src = image.thumbnail_resources[0].src;
+      img.alt = image.caption
+
+      link.href = `https://instagram.com/p/${image.code}`
+      link.rel = "noreferrer nofollow"
+      link.target = "__blank"
+
+      inner.classList.add('feedback__widget__in')
+
+      inner.appendChild(img)
+      link.appendChild(inner)
+
+      element.append(link)
+    })
+  }
+
+  $.get(`https://www.instagram.com/${INSTAGRAM_NAME}/?__a=1`)
+  .then((resp) => {
+    const images = resp.user.media.nodes.slice(0, 4);
+    addImages($('#instagram'), images)
+  })
 })
