@@ -1,4 +1,5 @@
 //=include lib/jquery.js
+//=include lib/modal-video.js
 
 console.log('App is running')
 
@@ -81,4 +82,6 @@ $(document).ready(function () {
     })
     setActive(0)
   })
+
+  $('.js-modal-video').modalVideo()
 })
