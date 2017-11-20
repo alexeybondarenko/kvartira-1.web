@@ -345,7 +345,7 @@ $(document).ready(function () {
     }, duration);
   }
 
-  $('.nav__item a').on('click', function(e) {
+  $('.js-anchor').on('click', function(e) {
     const $this = $(this)
     const href = $this.prop('href')
     const url = parseUrl(href)
@@ -413,5 +413,13 @@ $(document).ready(function () {
     setActive(0)
   })
 
-  $('.js-modal-video').modalVideo()
+  $('.js-modal-video').modalVideo({
+    channel: 'youtube',
+    youtube: {
+      controls: 0,
+      cc_load_policy: 0,
+      showinfo: 0,
+      autoplay: 1
+    },
+  })
 })
