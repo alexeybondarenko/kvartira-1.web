@@ -83,5 +83,13 @@ $(document).ready(function () {
     setActive(0)
   })
 
-  $('.js-modal-video').modalVideo()
+  $('.js-modal-video').modalVideo({
+    channel: 'youtube',
+    youtube: {
+      controls: 0,
+      cc_load_policy: 0,
+      showinfo: 0,
+      autoplay: 1
+    },
+  })
 })
