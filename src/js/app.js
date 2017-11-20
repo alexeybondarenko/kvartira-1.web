@@ -15,7 +15,7 @@ $(document).ready(function () {
     }, duration);
   }
 
-  $('.nav__item a').on('click', function(e) {
+  $('.js-anchor').on('click', function(e) {
     const $this = $(this)
     const href = $this.prop('href')
     const url = parseUrl(href)
